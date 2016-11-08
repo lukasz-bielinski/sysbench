@@ -18,6 +18,7 @@ do
     sleep 10
     date=$(date --iso-8601=seconds)
     echo "starting sysbench at $date"
+    echo ""
     sysbench --test=cpu --cpu-max-prime=20000 --num-threads=1 run
 
 
