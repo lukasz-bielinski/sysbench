@@ -16,7 +16,7 @@ trap cleanup SIGINT SIGTERM
 while [ 1 ]
 do
     sleep 60
-
+    sysbench --test=cpu --cpu-max-prime=20000 --num-threads=1 run
 
 
 done
