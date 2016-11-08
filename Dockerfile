@@ -20,5 +20,7 @@ RUN apt-get update && \
   apt-get clean -y && \
 rm -rf /var/lib/apt/lists/*
 
+ADD script.sh script.sh
+RUN chmod +x script.sh
 
 ENTRYPOINT ["/script.sh"]
